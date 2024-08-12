@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="logo">
+                <a href="#">
+                    SE-ED
+                </a>
+            </div>
+            <div class="search">
+                <input class="search-box" placeholder="ค้นหา">
+                <div class="total-dropdown" id="dropdownMenu">
+                    <div class="text-total">
+                        ทั้งหมด
+                    </div>
+                    <div class="arrow">
+                        <span class="bxs--up-arrow"></span>
+                    </div>
+                    <ul id="dropdownList" class="total-dropdown-hide">
+                        <li class="by-word" onclick="input('ทั้งหมด')">ทั้งหมด</li>
+                        <li class="by-word" onclick="input('ชื่อสินค้า')">ชื่อสินค้า</li>
+                        <li class="by-word" onclick="input('ชื่อผู้เขียน')">ชื่อผู้เขียน</li>
+                        <li class="by-word" onclick="input('ชื่อผู้แปล')">ชื่อผู้แปล</li>
+                        <li class="by-word" onclick="input('ผู้บรรยาย')">ผู้บรรยาย</li>
+                        <li class="by-word" onclick="input('สำนักพิมพ์')">สำนักพิมพ์</li>
+                        <li class="by-word" onclick="input('ชื่อดีไซน์')">ชื่อดีไซน์</li>
+                        <li class="by-word" onclick="input('บาร์โค้ด')">บาร์โค้ด</li>
+                        <li class="by-word" onclick="input('ISBN')">ISBN</li>
+                        <li class="by-word" onclick="input('คำโปรย')">คำโปรย</li>
+                        <li class="by-word" onclick="input('คำต้น')">คำต้น</li>
+                    </ul>
+                </div>
+                <button type="button" class="search-button">
+                    <span class="prime--search"></span>
+                </button>
+
+            </div>
+            <div class="right-head-content">
+                <div class="box-content">
+                    <div class="change-language">
+                        <div id="change-language-id">
+                            <div class="change-language-box">
+                                <div class="language-text">
+                                    TH
+                                </div>
+                                <div class="arrow">
+                                    <span class="bxs--up-arrow"></span>
+                                </div>
+
+                                <div class="change-language-dropdown">
+                                    <ul>
+                                        <li onclick="change_language('TH')">TH</li>
+                                        <li onclick="change_language('EN')">EN</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cart">
+                        <div class="count-cart">
+                            0
+                        </div>
+                        <span class="solar--cart-bold-duotone"></span>
+                    </div>
+                    <div class="user">
+                        <span class="fa6-solid--user"></span>
+                    </div>
+                    <div class="hamberger">
+                        <div class="hamberger-box">
+                            <div class="hamberger-line">
+                            </div>
+                            <div class="hamberger-line-2">
+                            </div>
+                            <div class="hamberger-line">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- <header></header> -->
+
+        <!-- banner -->
+        <div class="banner">
+            <div class="banner-box">
+                <div class="top-content">
+                    <div class="menu-content">
+                        <ul>
+                            <li class="bestseller active-menu-list">
+                                จัดอันดับหนังสือขายดี
+                                <div class="dropdown-menu">
+                                    <div class="head">
+                                        จัดอันดับหนังสือขายดี
+                                    </div>
+                                    <ul>
+                                        <li>หนังสือขายดีรายวันล่าสุด</li>
+                                        <li>หนังสือขายดีราย 7 วันล่าสุด</li>
+                                        <li>หนังสือขายดีราย 7 วันล่าสุด (รายหมวด)</li>
+                                        <li>หนังสือจัดโปรโมชั่น ขายดีรายวันล่าสุด</li>
+                                        <li>หนังสือจัดโปรโมชั่น ขายดีราย 7 วันล่าสุด</li>
+                                        <li>e-books ขายดีราย 7 วันล่าสุด (รายหมวด)</li>
+                                        <li>audiobook ขายดีราย 7 วันล่าสุด (รายหมวด)</li>
+                                    </ul>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                </div>
+                            </li>
+                            
+                            <li class="menu-list">
+                                จัดอันดับสินค้าขายดี
+                            </li>
+                            <li class="menu-list">
+                                หนังสือ
+                            </li>
+                            <li class="menu-list">
+                                หนังสือภาษาต่างประเทศ
+                            </li>
+                            <li class="menu-list">
+                                หนังสือภาษาต่างประเทศ
+                            </li>
+                            <li class="menu-list">
+                                นิตยสาร
+                            </li>
+                            <li class="menu-list">
+                                E-Books
+                            </li>
+                            <li class="menu-list">
+                                Audiobooks
+                            </li>
+                            <li class="menu-list">
+                                เพิ่มเติม
+                                <span class="bxs--up-arrow"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="bottom-content">
+                    <div class="banner-bottom-box">
+
+                        <img class="arrow-banner-left" src="img/Vector.svg" alt="">
+                        <img onclick="plusDivs(-1)" class="arrow-banner-left-hiden" src="img/hover-arrow.svg" alt="">
+
+                        <a href="#">
+                            <img class="mySlides" src="img/Special_July2024_790x287 (1).png" alt="" srcset="">
+                        </a>
+                        <a href="#">
+                            <img class="mySlides" src="img/best-seller_aug2024_(790x287px).png" alt="" srcset="">
+                        </a>
+                        <a href="#">
+                            <img class="mySlides" src="img/790-287-e-gift.jpg" alt="" srcset="">
+                        </a>
+                        <a href="#">
+                            <img class="mySlides" src="img/member_se-ed.com_aug2024(790x287px).png" alt="" srcset="">
+                        </a>
+                        <a href="#">
+                            <img class="mySlides" src="img/Pro_flashsale_Jan23_790x287.jpg" alt="" srcset="">
+                        </a>
+
+
+                        <img class="arrow-banner-right" src="img/Vector.svg" alt="">
+                        <img onclick="plusDivs(1)" class="arrow-banner-right-hiden" src="img/hover-arrow.svg" alt="">
+
+
+                        <div class="dots">
+                            <div onclick="currentDiv(1)" class="active-dot  notactive-dot demo"></div>
+                            <div onclick="currentDiv(2)" class="active-dot  notactive-dot demo"></div>
+                            <div onclick="currentDiv(3)" class="active-dot  notactive-dot demo"></div>
+                            <div onclick="currentDiv(4)" class="active-dot  notactive-dot demo"></div>
+                            <div onclick="currentDiv(5)" class="active-dot  notactive-dot demo"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // dorpdown
+        function input(rold) {
+            let text = '<div class="total-dropdown" id="dropdownMenu"><div class="text-total">' + rold + '</div><div class="arrow"><span class="bxs--up-arrow"></span></div><ul id="dropdownList" class="total-dropdown-hide"><li class="by-word" onclick="input(\'ทั้งหมด\')">ทั้งหมด</li><li class="by-word" onclick="input(\'ชื่อสินค้า\')">ชื่อสินค้า</li><li class="by-word" onclick="input(\'ชื่อผู้เขียน\')">ชื่อผู้เขียน</li><li class="by-word" onclick="input(\'ชื่อผู้แปล\')">ชื่อผู้แปล</li><li class="by-word" onclick="input(\'ผู้บรรยาย\')">ผู้บรรยาย</li><li class="by-word" onclick="input(\'สำนักพิมพ์\')">สำนักพิมพ์</li><li class="by-word" onclick="input(\'ชื่อดีไซน์\')">ชื่อดีไซน์</li><li class="by-word" onclick="input(\'บาร์โค้ด\')">บาร์โค้ด</li><li class="by-word" onclick="input(\'ISBN\')">ISBN</li><li class="by-word" onclick="input(\'คำโปรย\')">คำโปรย</li><li class="by-word" onclick="input(\'คำต้น\')">คำต้น</li></ul></div>'
+            replaceText(text)
+        }
+        function replaceText(newText) {
+            document.getElementById('dropdownMenu').innerHTML = newText;
+        }
+        function change_language(language) {
+            let language_html = '<div class="change-language"><div id="change-language-id"><div class="change-language-box"><div class="language-text">' + language + '</div><div class="arrow"><span class="bxs--up-arrow"></span></div><div class="change-language-dropdown"><ul><li onclick="change_language(\'TH\')">TH</li><li onclick="change_language(\'EN\')">EN</li></ul></div></div></div></div>'
+            replace_language(language_html)
+        }
+        function replace_language(newlanguage) {
+            document.getElementById('change-language-id').innerHTML = newlanguage;
+        }
+        // dorpdown
+
+        // slider banner
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            console.log('success' + n)
+            showDivs(slideIndex += n);
+
+        }
+
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" notactive-dot", " active-dot");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " notactive-dot";
+        }
+        var slideIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName
+            ("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            for (i = 0; i < x.length; i++) {
+                console.log(x[i])
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+
+            if (slideIndex > x.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" notactive-dot", " active-dot");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " notactive-dot";
+            
+            setTimeout(carousel, 4000); // Change image every 2 seconds
+        }
+        // slider banner
+    </script>
+</body>
+
+</html>
